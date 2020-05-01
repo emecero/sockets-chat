@@ -1,3 +1,10 @@
+// {
+//     id: 'ALkjdaklsdj-asdkj',
+//     nombre: 'Fernando',
+// }
+
+
+
 class Usuarios {
 
     constructor() {
@@ -15,9 +22,7 @@ class Usuarios {
     }
 
     getPersona(id) {
-        let persona = this.personas.filter(persona => {
-            return persona.id === id
-        })[0];
+        let persona = this.personas.filter(persona => persona.id === id)[0];
 
         return persona;
     }
@@ -35,17 +40,14 @@ class Usuarios {
 
         let personaBorrada = this.getPersona(id);
 
-        this.personas = this.personas.filter(persona => {
-            return persona.id != id
-
-        });
+        this.personas = this.personas.filter(persona => persona.id != id);
 
         return personaBorrada;
+
     }
 
 
 }
-
 
 
 module.exports = {
